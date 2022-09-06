@@ -14,7 +14,4 @@ public class MainPage {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
-
-
-
 }
