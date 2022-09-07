@@ -57,6 +57,12 @@ public class MainPage {
         return new LoginPage(driver);
     }
 
+    public LoginPage clickOnCreateAccount() {
+        log.info("User clicks on the login page.");
+        getCreateAccountBtn().click();
+        return new LoginPage(driver);
+    }
+
 //    Top Sellers:
 
     private int getTopSellers() {
