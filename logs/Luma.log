@@ -1,4 +1,4 @@
-2022-09-13 20:23:53,877  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
-2022-09-13 20:23:58,721  INFO [main] MainPage:46 - User navigates on the search page. 
-2022-09-13 20:23:58,724  WARN [main] MainPage:49 - User wants to get all list of sorters. 
-2022-09-13 20:23:59,097  INFO [main] MainPage:53 -  =====>Price<===== 
+2022-09-13 21:05:33,483  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-13 21:05:37,193  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-13 21:05:37,195  WARN [main] MainPage:49 - User wants to get all list of sorters. 
+2022-09-13 21:05:38,655  INFO [main] MainPage:53 -  =====> Price <===== 

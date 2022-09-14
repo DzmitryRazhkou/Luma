@@ -57,7 +57,11 @@ public class SearchPage {
         }
     }
 
-
-//    div[class='content block-collapsible-nav-content'] ul li
-
+    public String getProductSorted() {
+        By productSortedLocator = By.cssSelector("div[class='products wrapper grid products-grid']:nth-child(2) li:nth-of-type(2) div div div span span span span");
+        wait.until(ExpectedConditions.presenceOfElementLocated(productSortedLocator));
+        String productPrice = driver.findElement(productSortedLocator).getText();
+        System.out.println(" =====> " +productPrice+ " <===== ");
+        return productPrice;
+    }
 }

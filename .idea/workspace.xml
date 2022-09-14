@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5575812-2a52-4e10-a7c4-054140647348" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/Luma.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Luma.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/pages/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/AccountPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/SearchPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/pages/AccountPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/pages/MainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/AccountPageTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/LoginPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/LoginPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/null_09-13-2022 19:27:58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/null_09-13-2022 19:29:28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/null_09-13-2022 19:51:48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/null_09-13-2022 19:52:33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/pages/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/SearchPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/SearchPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/pages/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/pages/SearchPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/SearchPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/SearchPageTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

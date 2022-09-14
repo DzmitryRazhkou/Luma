@@ -33,7 +33,7 @@ public class SearchPageTest {
         driver.quit();
     }
 
-    @Test
+    @Test(priority = 1)
     public void searchTest(){
         String product = "Hoodie";
         String expSearchResult = "Search results for: 'Hoodie'";
@@ -44,12 +44,15 @@ public class SearchPageTest {
         Assert.assertEquals(expSearchResult, actSearchResult);
     }
 
-    @Test
+    @Test(priority = 2)
     public void validateProductSortTest() {
         String product = "Hoodie";
         String price = "Price";
         MainPage mainPage = new MainPage(driver);
         SearchPage searchPage = mainPage.searchProduct(product);
         searchPage.getSortText(price);
+        String actRes = searchPage.getProductSorted();
+        String expRes = "$70.00";
+        Assert.assertEquals(expRes, actRes);
     }
 }
