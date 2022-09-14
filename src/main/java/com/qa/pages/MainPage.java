@@ -1,10 +1,7 @@
 package com.qa.pages;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -31,9 +28,23 @@ public class MainPage {
     }
 
     public boolean logoIsDisplayed() {
-        log.info("The main page has been validated");
+        log.info("The main page has been validated. ");
         System.out.println(" =====> " + getLogo().getText() + " <===== ");
         return getLogo().isDisplayed();
+    }
+
+    //    Search:
+    private WebElement getSearchField() {
+        By searchFieldLocator = By.id("search");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchFieldLocator));
+        return driver.findElement(searchFieldLocator);
+    }
+
+    public SearchPage searchProduct(String product){
+        log.info("User types a product name on the search field and presses the ENTER/RETURN button for the search.");
+        getSearchField().sendKeys(product, Keys.RETURN);
+        log.info("User navigates on the search page. ");
+        return new SearchPage(driver);
     }
 
 //    Login/ Create an Account:

@@ -1,18 +1,4 @@
-2022-09-13 18:55:49,187  INFO [main] MainPage:54 - User clicks on the login page.
-2022-09-13 18:55:53,253  INFO [main] MainPage:56 - User navigates on the login page.
-2022-09-13 18:55:53,254  INFO [main] LoginPage:96 - User types an email address in the email field.
-2022-09-13 18:55:53,824  INFO [main] LoginPage:99 - User types an password in the password field.
-2022-09-13 18:55:53,976  INFO [main] LoginPage:102 - User clicks aon the submit button.
-2022-09-13 18:56:04,869  INFO [main] MainPage:54 - User clicks on the login page.
-2022-09-13 18:56:08,538  INFO [main] MainPage:56 - User navigates on the login page.
-2022-09-13 18:56:08,539  INFO [main] LoginPage:96 - User types an email address in the email field.
-2022-09-13 18:56:09,041  INFO [main] LoginPage:99 - User types an password in the password field.
-2022-09-13 18:56:09,257  INFO [main] LoginPage:102 - User clicks aon the submit button.
-2022-09-13 18:56:18,477  INFO [main] MainPage:61 - User clicks on the login page.
-2022-09-13 18:56:21,920  INFO [main] MainPage:63 - User navigates on the login page.
-2022-09-13 18:56:21,920  INFO [main] LoginPage:180 - User types an first name in the field.
-2022-09-13 18:56:22,579  INFO [main] LoginPage:184 - User types an last name in the field.
-2022-09-13 18:56:22,696  INFO [main] LoginPage:188 - User types an email in the field.
-2022-09-13 18:56:22,845  INFO [main] LoginPage:192 - User types a password in the field.
-2022-09-13 18:56:23,825  INFO [main] LoginPage:196 - User confirms the password.
-2022-09-13 18:56:24,036  INFO [main] LoginPage:200 - User clicks on the submit button.
+2022-09-13 20:23:53,877  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-13 20:23:58,721  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-13 20:23:58,724  WARN [main] MainPage:49 - User wants to get all list of sorters. 
+2022-09-13 20:23:59,097  INFO [main] MainPage:53 -  =====>Price<===== 

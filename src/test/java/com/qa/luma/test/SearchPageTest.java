@@ -1,33 +1,26 @@
 package com.qa.luma.test;
 
-import com.github.javafaker.Faker;
 import com.qa.browser.BrowserFactory;
 import com.qa.enums.Browsers;
-import com.qa.pages.LoginPage;
 import com.qa.pages.MainPage;
+import com.qa.pages.SearchPage;
 import com.qa.utils.ScreenShot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class AccountPageTest {
-
-
+@Listeners(com.qa.luma.listeners.Listeners.class)
+public class SearchPageTest {
     private WebDriver driver;
-    private MainPage mainPage;
-    private LoginPage loginPage;
-
-
-    private Faker faker;
 
     @BeforeMethod
     public void startUp() throws MalformedURLException {
-        Faker faker = new Faker();
         driver = BrowserFactory.getBrowser(Browsers.CHROME);
         driver.get("https://magento.softwaretestingboard.com/");
     }
@@ -40,6 +33,23 @@ public class AccountPageTest {
         driver.quit();
     }
 
+    @Test
+    public void searchTest(){
+        String product = "Hoodie";
+        String expSearchResult = "Search results for: 'Hoodie'";
 
+        MainPage mainPage = new MainPage(driver);
+        SearchPage searchPage = mainPage.searchProduct(product);
+        String actSearchResult = searchPage.searchValidator();
+        Assert.assertEquals(expSearchResult, actSearchResult);
+    }
 
+    @Test
+    public void validateProductSortTest() {
+        String product = "Hoodie";
+        String price = "Price";
+        MainPage mainPage = new MainPage(driver);
+        SearchPage searchPage = mainPage.searchProduct(product);
+        searchPage.getSortText(price);
+    }
 }
