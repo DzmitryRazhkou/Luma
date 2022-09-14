@@ -22,11 +22,9 @@ public class LoginPageTest {
     private WebDriver driver;
     private MainPage mainPage;
     private LoginPage loginPage;
-    private Faker faker;
 
     @BeforeMethod
     public void startUp() throws MalformedURLException {
-        Faker faker = new Faker();
         driver = BrowserFactory.getBrowser(Browsers.CHROME);
         driver.get("https://magento.softwaretestingboard.com/");
     }
@@ -39,26 +37,37 @@ public class LoginPageTest {
         driver.quit();
     }
 
-    @Test
-    public void loginTest(){
+    @Test(priority = 1)
+    public void loginWithCorrectCredentialsTest(){
         String email = "dimagadjilla@gmail.com";
         String password = "3036057Dr";
         mainPage = new MainPage(driver);
         loginPage = mainPage.clickOnSignIn();
         loginPage.login(email, password);
-        Assert.assertTrue(loginPage.loggedIn());
+        Assert.assertTrue(loginPage.validateLoggedInCustomer());
     }
 
-    @Test
+    @Test(priority = 2)
+    public void loginWithIncorrectCredentialsTest(){
+        String email = "dimagadjilla_@gmail.com";
+        String password = "3036057Dr_";
+        mainPage = new MainPage(driver);
+        loginPage = mainPage.clickOnSignIn();
+        loginPage.login(email, password);
+        Assert.assertTrue(loginPage.alertDisplayed());
+    }
+
+    @Test(priority = 3)
     public void createAccount(){
-        faker = new Faker();
+        Faker faker = new Faker();
         String firstName = faker.name().firstName();
         String lastName = faker.name().lastName();
         String email = faker.internet().emailAddress();
         String password = LoginPage.generatePassword();
+
         mainPage = new MainPage(driver);
         loginPage = mainPage.clickOnCreateAccount();
         loginPage.createAccount(firstName, lastName, email, password);
-        Assert.assertTrue(loginPage.successUp());
+        Assert.assertTrue(loginPage.successMessage());
     }
 }

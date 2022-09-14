@@ -14,9 +14,9 @@ import java.util.List;
 
 public class MainPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private Logger log;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+    private final Logger log;
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -25,7 +25,6 @@ public class MainPage {
     }
 
 //    Logo
-
     private WebElement getLogo() {
         By logoLocator = By.cssSelector("a.logo");
         return driver.findElement(logoLocator);
@@ -54,12 +53,14 @@ public class MainPage {
     public LoginPage clickOnSignIn() {
         log.info("User clicks on the login page.");
         getLoginBtn().click();
+        log.info("User navigates on the login page.");
         return new LoginPage(driver);
     }
 
     public LoginPage clickOnCreateAccount() {
         log.info("User clicks on the login page.");
         getCreateAccountBtn().click();
+        log.info("User navigates on the login page.");
         return new LoginPage(driver);
     }
 
@@ -82,8 +83,10 @@ public class MainPage {
     public int topSellers() {
         By topSellersLocator = By.cssSelector("ol[class='product-items widget-product-grid'] li");
         WebElement playlist = driver.findElement(topSellersLocator);
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", playlist);
+        log.warn("JS scrolls down to the web element.");
         return getTopSellers();
     }
 }

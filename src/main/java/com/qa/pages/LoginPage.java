@@ -3,6 +3,7 @@ package com.qa.pages;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +22,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        log = Logger.getLogger(MainPage.class);
+        log = Logger.getLogger(LoginPage.class);
     }
 
     private WebElement getCustomerLogin(){
@@ -56,36 +57,50 @@ public class LoginPage {
         return driver.findElement(signInLocator);
     }
 
-//    Validate:
-
-    private WebElement getLoggedIn() {
-        By loggedInLocator = By.xpath("(//*[@class='logged-in'])[1]");
-        wait.until(ExpectedConditions.presenceOfElementLocated(loggedInLocator));
-        return driver.findElement(loggedInLocator);
+    //    Logged In Customer Validate with Correct Credentials:
+    private WebElement loggedInCustomerValidator() {
+        By loggedInCustomerValidatorLocator = By.xpath("(//*[@class='logged-in'])[1]");
+        wait.until(ExpectedConditions.presenceOfElementLocated(loggedInCustomerValidatorLocator));
+        return driver.findElement(loggedInCustomerValidatorLocator);
     }
 
-    private WebElement getSuccess() {
-        By successLocator = By.cssSelector("div[role='alert']");
-        wait.until(ExpectedConditions.presenceOfElementLocated(successLocator));
-        return driver.findElement(successLocator);
+    public boolean validateLoggedInCustomer() {
+        try {
+            System.out.println(" =====> First and Last Name of The Customer have been Displayed <===== ");
+            return loggedInCustomerValidator().isDisplayed();
+        } catch (TimeoutException y) {
+            System.out.println(" =====> Provide Another Locator <=====");
+        }
+        return false;
     }
 
-    public void login(String email, String password) {
-        getEmail().clear();
-        getEmail().sendKeys(email);
-        getPassword().clear();
-        getPassword().sendKeys(password);
-        getSignIn().click();
+    //    Alert - Incorrect Credentials:
+    private WebElement getAlertMessage() {
+        By alertLocator = By.cssSelector("div[role='alert']");
+        wait.until(ExpectedConditions.presenceOfElementLocated(alertLocator));
+        return driver.findElement(alertLocator);
     }
 
-    public boolean loggedIn() {
-        if (getLoggedIn().isDisplayed()) {
-            System.out.println(" =====> The Web Element is Displayed <===== ");
-            return true;
-        } else {
-            System.out.println(" =====> The Web Element is not Displayed <===== ");
+    public boolean alertDisplayed() {
+        try {
+            System.out.println(" =====> Alert Message is Displayed <===== ");
+            return getAlertMessage().isDisplayed();
+        } catch (TimeoutException y) {
+            System.out.println(" =====> Provide A Correct Locator <===== ");
             return false;
         }
+    }
+
+
+    public void login(String email, String password) {
+        log.info("User types an email address in the email field.");
+        getEmail().clear();
+        getEmail().sendKeys(email);
+        log.info("User types an password in the password field.");
+        getPassword().clear();
+        getPassword().sendKeys(password);
+        log.info("User clicks aon the submit button.");
+        getSignIn().click();
     }
 
 //    Create New Customer Account
@@ -108,6 +123,22 @@ public class LoginPage {
         return driver.findElement(emailCustomerLocator);
     }
 
+    //    Function Generate a Password:
+    public static String generatePassword() {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@!#$%&";
+        String password = RandomStringUtils.random(8, characters);
+
+        String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@!#$%&])(?=\\S+$).{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+
+        if (matcher.matches()) {
+            return password;
+        } else {
+            return generatePassword(); // recursion
+        }
+    }
+
     private WebElement getPasswordCustomer() {
         By passwordCustomerLocator = By.id("password");
         wait.until(ExpectedConditions.presenceOfElementLocated(passwordCustomerLocator));
@@ -126,47 +157,48 @@ public class LoginPage {
         return driver.findElement(createAccountLocator);
     }
 
-    public void createAccount(String firstName, String lastName, String email, String password) {
-        getFirstName().clear();
-        getFirstName().sendKeys(firstName);
+//    Success Message For Creating New Account:
 
-        getLastName().clear();
-        getLastName().sendKeys(lastName);
 
-        getEmailCustomer().clear();
-        getEmailCustomer().sendKeys(email);
-
-        getPasswordCustomer().clear();
-        getPasswordCustomer().sendKeys(password);
-
-        getConfirmPasswordCustomer().clear();
-        getConfirmPasswordCustomer().sendKeys(password);
-
-        getCreateAccount().click();
+    private WebElement getSuccess() {
+        By successLocator = By.cssSelector("div[role='alert']");
+        wait.until(ExpectedConditions.presenceOfElementLocated(successLocator));
+        return driver.findElement(successLocator);
     }
 
-    public static String generatePassword() {
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@!#$%&";
-        String password = RandomStringUtils.random( 8, characters );
-
-        String regex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@!#$%&])(?=\\S+$).{8,}$";
-        Pattern pattern = Pattern.compile( regex );
-        Matcher matcher = pattern.matcher( password );
-
-        if (matcher.matches()) {
-            return password;
-        } else {
-            return generatePassword(); // recursion
-        }
-    }
-
-    public boolean successUp() {
-        if (getSuccess().isDisplayed()) {
-            System.out.println(" =====> The Web Element is Displayed <===== ");
-            return true;
-        } else {
-            System.out.println(" =====> The Web Element is not Displayed <===== ");
+    public boolean successMessage() {
+        try {
+            System.out.println(" =====> Success Message is Displayed <===== ");
+            return getSuccess().isDisplayed();
+        } catch (TimeoutException y) {
+            System.out.println(" =====> Provide A Correct Locator <===== ");
             return false;
         }
     }
+
+    public void createAccount(String firstName, String lastName, String email, String password) {
+        log.info("User types an first name in the field.");
+        getFirstName().clear();
+        getFirstName().sendKeys(firstName);
+
+        log.info("User types an last name in the field.");
+        getLastName().clear();
+        getLastName().sendKeys(lastName);
+
+        log.info("User types an email in the field.");
+        getEmailCustomer().clear();
+        getEmailCustomer().sendKeys(email);
+
+        log.info("User types a password in the field.");
+        getPasswordCustomer().clear();
+        getPasswordCustomer().sendKeys(password);
+
+        log.info("User confirms the password.");
+        getConfirmPasswordCustomer().clear();
+        getConfirmPasswordCustomer().sendKeys(password);
+
+        log.info("User clicks on the submit button.");
+        getCreateAccount().click();
+    }
 }
+

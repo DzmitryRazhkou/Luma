@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5575812-2a52-4e10-a7c4-054140647348" name="Changes" comment="" />
+    <list default="true" id="c5575812-2a52-4e10-a7c4-054140647348" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qa/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qa/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/LoginPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/MainPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qa/luma/test/MainPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qa/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qa/pages/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/LoginPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/LoginPageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/MainPageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qa/luma/test/MainPageTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,13 +39,121 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/dzmitryrazhkou/Documents/Automation/Luma/src/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.LoginPageTest">
+    <configuration name="LoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Luma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.luma.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.luma.test" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.luma.test.LoginPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.createAccount" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Luma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.luma.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.luma.test" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.luma.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="createAccount" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.loginWithCorrectCredentialsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Luma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.luma.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.luma.test" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.luma.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="loginWithCorrectCredentialsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTest.loginWithIncorrectCredentialsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Luma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.luma.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.luma.test" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.luma.test.LoginPageTest" />
+      <option name="METHOD_NAME" value="loginWithIncorrectCredentialsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Luma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qa.luma.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qa.luma.test" />
+      <option name="MAIN_CLASS_NAME" value="com.qa.luma.test.MainPageTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.LoginPageTest" />
+        <item itemvalue="TestNG.MainPageTest" />
+        <item itemvalue="TestNG.LoginPageTest.loginWithIncorrectCredentialsTest" />
+        <item itemvalue="TestNG.LoginPageTest.loginWithCorrectCredentialsTest" />
+        <item itemvalue="TestNG.LoginPageTest.createAccount" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
