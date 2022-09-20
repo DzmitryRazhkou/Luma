@@ -1,4 +1,38 @@
-2022-09-13 21:05:33,483  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
-2022-09-13 21:05:37,193  INFO [main] MainPage:46 - User navigates on the search page. 
-2022-09-13 21:05:37,195  WARN [main] MainPage:49 - User wants to get all list of sorters. 
-2022-09-13 21:05:38,655  INFO [main] MainPage:53 -  =====> Price <===== 
+2022-09-20 00:52:45,969  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-20 00:52:49,577  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-20 00:52:49,579  INFO [main] MainPage:31 - Product of the Search
+2022-09-20 00:52:55,264  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-20 00:53:00,062  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-20 00:53:00,063  WARN [main] MainPage:47 - User wants to get all list of sorters. 
+2022-09-20 00:53:01,525  INFO [main] MainPage:51 -  =====> Price <===== 
+2022-09-20 00:53:07,756  INFO [main] MainPage:65 - User clicks on the login page.
+2022-09-20 00:53:11,321  INFO [main] MainPage:67 - User navigates on the login page.
+2022-09-20 00:53:11,322  INFO [main] LoginPage:96 - User types an email address in the email field.
+2022-09-20 00:53:11,791  INFO [main] LoginPage:99 - User types an password in the password field.
+2022-09-20 00:53:11,899  INFO [main] LoginPage:102 - User clicks aon the submit button.
+2022-09-20 00:53:15,265  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-20 00:53:16,272  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-20 00:53:16,272  WARN [main] MainPage:47 - User wants to get all list of sorters. 
+2022-09-20 00:53:18,147  INFO [main] MainPage:51 -  =====> Price <===== 
+2022-09-20 00:53:20,540  INFO [main] MainPage:91 - User selects size of the product. 
+2022-09-20 00:53:21,022  INFO [main] MainPage:93 - User selects color of the product. 
+2022-09-20 00:53:21,218  INFO [main] MainPage:98 - User makes mouse over to `Add To Cart` button. 
+2022-09-20 00:53:21,408  INFO [main] MainPage:103 - User clicks on the `Add To Cart` button. 
+2022-09-20 00:53:21,744  INFO [main] MainPage:123 - User clicks on the cart
+2022-09-20 00:53:21,883  INFO [main] MainPage:116 - User validates price from product in the cart
+2022-09-20 00:53:27,325  INFO [main] MainPage:65 - User clicks on the login page.
+2022-09-20 00:53:30,722  INFO [main] MainPage:67 - User navigates on the login page.
+2022-09-20 00:53:30,722  INFO [main] LoginPage:96 - User types an email address in the email field.
+2022-09-20 00:53:31,188  INFO [main] LoginPage:99 - User types an password in the password field.
+2022-09-20 00:53:31,283  INFO [main] LoginPage:102 - User clicks aon the submit button.
+2022-09-20 00:53:34,441  INFO [main] MainPage:44 - User types a product name on the search field and presses the ENTER/RETURN button for the search.
+2022-09-20 00:53:35,488  INFO [main] MainPage:46 - User navigates on the search page. 
+2022-09-20 00:53:35,489  WARN [main] MainPage:47 - User wants to get all list of sorters. 
+2022-09-20 00:53:37,423  INFO [main] MainPage:51 -  =====> Price <===== 
+2022-09-20 00:53:38,942  INFO [main] MainPage:91 - User selects size of the product. 
+2022-09-20 00:53:40,019  INFO [main] MainPage:93 - User selects color of the product. 
+2022-09-20 00:53:40,127  INFO [main] MainPage:98 - User makes mouse over to `Add To Cart` button. 
+2022-09-20 00:53:40,407  INFO [main] MainPage:103 - User clicks on the `Add To Cart` button. 
+2022-09-20 00:53:40,758  INFO [main] MainPage:134 - User clicks on the cart
+2022-09-20 00:53:40,893  INFO [main] MainPage:136 - User clicks on the proceed to checkout
+2022-09-20 00:53:42,421  INFO [main] MainPage:33 - User receives a text from shipping address breadcrumb. 
